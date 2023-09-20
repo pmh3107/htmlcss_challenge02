@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --primary-color-black-green: #143c3c;
+  --primary-color-small-green: #e2eddf;
+  --text-color-black-gray: #575d5e;
+  --text-color-white: #fff;
+}
 html {
   font-size: 62.5%;
 }
@@ -22,8 +28,8 @@ a {
   line-height: 57px;
   border-radius: 40px;
   border: 1.5px solid #143c3c;
-  background: var(--primary-color-black-green, #143c3c);
-  color: var(--text-color-white, #fff);
+  background: var(--primary-color-black-green);
+  color: var(--text-color-white);
   text-align: center;
   /* Paragraph/h2 18px medium */
   font-size: 1.8rem;
@@ -33,7 +39,7 @@ a {
   transition: all ease 0.5s;
   border: 1px solid transparent;
   color: #143c3c;
-  background-color: #e2eddf;
+  background-color: var(--primary-color-small-green);
 }
 /* Header */
 .header {
@@ -58,7 +64,7 @@ a {
   margin-left: 317px;
 }
 .navbar__link {
-  color: var(--text-color-black-gray, #575d5e);
+  color: var(--text-color-black-gray);
   /* Paragraph/h2 18px medium */
   font-size: 1.8rem;
   font-weight: 500;
@@ -72,8 +78,64 @@ a {
   display: inline-block;
   width: 16px;
   height: 2px;
-  background: var(--primary-color-black-green, #143c3c);
+  background: var(--primary-color-black-green);
 }
+.navbar__link:hover,
 .navbar__link.navbar__link--active {
-  color: var(--primary-color-black, #152427);
+  color: var(--primary-color-black);
+}
+/* hero */
+.hero {
+  margin-top: 60px;
+}
+.hero__heading {
+  width: 368px;
+  color: var(--primary-color-black);
+  /* Heading/H2 50px Extra bold */
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.2; /* 120% */
+}
+.hero__desc {
+  width: 341px;
+  margin-top: 20px;
+  color: var(--text-color-black-gray);
+  /* Paragraph/h2 18px medium */
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.556; /* 155.556% */
+}
+.hero__action {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  position: relative;
+  margin-top: 42px;
+}
+.hero__play {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.hero__play--around {
+  border: 4px solid var(--primary-color-black-green);
+  border-radius: 50%;
+}
+.hero__play--button {
+  color: #83a17d;
+  padding: 3px;
+}
+.hero__play--desc {
+  color: #152427;
+  text-align: center;
+  /* Paragraph/h3 18px bold */
+  font-family: Poppins;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.667; /* 166.667% */
+}
+.hero__play:hover .hero__play--around {
+  transform: rotate(-180deg);
+  margin-left: 22px;
+  color: #83a17d;
 }
