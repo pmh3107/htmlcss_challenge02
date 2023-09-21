@@ -51,6 +51,20 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+.navbar::before {
+  position: absolute;
+  top: 90px;
+  content: "";
+  display: block;
+  width: 1140px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #dddcdc 51.09%,
+    rgba(212, 212, 212, 0) 99.68%
+  );
+}
 .header__logo {
   width: 146.4px;
   height: 26.236px;
@@ -88,6 +102,11 @@ a {
 .hero {
   margin-top: 60px;
 }
+.hero__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .hero__heading {
   width: 368px;
   color: var(--primary-color-black);
@@ -115,15 +134,21 @@ a {
 .hero__play {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 8px;
 }
 .hero__play--around {
   border: 4px solid var(--primary-color-black-green);
   border-radius: 50%;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  transform: rotate(-45deg);
+  transition: all ease-in 0.5s;
 }
 .hero__play--button {
   color: #83a17d;
   padding: 3px;
+  transform: rotate(45deg);
+  transition: all ease-in 0.5s;
 }
 .hero__play--desc {
   color: #152427;
@@ -135,7 +160,69 @@ a {
   line-height: 1.667; /* 166.667% */
 }
 .hero__play:hover .hero__play--around {
-  transform: rotate(-180deg);
-  margin-left: 22px;
-  color: #83a17d;
+  transform: rotate(135deg);
+  border-color: #83a17d;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+.hero__play:hover .hero__play--button {
+  transform: rotate(-135deg);
+}
+.hero__media {
+  position: relative;
+  width: 56, 7%;
+}
+.hero__images {
+  display: flex;
+  gap: 20px;
+  z-index: 1;
+}
+.hero__img {
+  width: 202px;
+  height: 466px;
+  border-radius: 110px;
+  object-fit: cover;
+}
+.hero__img:nth-child(2) {
+  margin-top: 77px;
+}
+.hero__background {
+  z-index: -1;
+  position: absolute;
+  bottom: 70px;
+  left: 170px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: #4dbb9a;
+  filter: blur(137px);
+}
+.hero__vector-up,
+.hero__vector-down,
+.hero__blur-up,
+.hero__blur-down {
+  position: absolute;
+}
+.hero__vector-up {
+  top: -28px;
+  left: -172px;
+  stroke-width: 1px;
+}
+.hero__blur-up {
+  top: -5px;
+  left: -200px;
+  width: 72.033px;
+  height: 72px;
+  transform: rotate(9.392deg);
+  /* flex-shrink: 0; */
+  z-index: 1;
+}
+.hero__vector-down {
+  bottom: -87px;
+  transform: rotate(-7.05deg);
+}
+.hero__blur-down {
+  bottom: -15px;
+  right: 35px;
+  z-index: 1;
 }
