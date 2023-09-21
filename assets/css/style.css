@@ -45,6 +45,7 @@ a {
 .header {
   font-family: "Public Sans", sans-serif;
   margin-top: 26px;
+  min-height: 760px;
 }
 .navbar {
   display: flex;
@@ -218,11 +219,37 @@ a {
   z-index: 1;
 }
 .hero__vector-down {
-  bottom: -87px;
-  transform: rotate(-7.05deg);
+  bottom: -62px;
+  transform: rotate(4.95deg);
+  left: 45px;
 }
 .hero__blur-down {
-  bottom: -15px;
-  right: 35px;
+  bottom: -37px;
+  right: 11px;
   z-index: 1;
+}
+/* Brand */
+.brand {
+  margin: 42px 0 106px;
+}
+.brand__content {
+  display: flex;
+  padding: 0 121px;
+  width: 1140px;
+  height: 201px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 100.5px;
+  background: var(--primary-color-small-green);
+}
+.brand__img--agworld {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.brand__img--agworld-name {
+  color: #163c35;
+  font-size: 2rem;
+  font-weight: 400;
 }
