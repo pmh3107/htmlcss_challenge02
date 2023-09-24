@@ -10,6 +10,7 @@
   --text-color-white: #fff;
   --primary-color-black: #152427;
   --primary-color-black-green: #143C3C;
+  --secondary-color-gray: #6A8383;
 }
 
 html {
@@ -760,4 +761,120 @@ a {
 
 .process__item:hover .process__item--desc {
   display: none;
+}
+
+/* Features */
+.features {
+  margin: 100px 0;
+  min-height: 100vh;
+  background-color: #143C3C;
+}
+
+.features__header {
+  display: flex;
+  align-items: center;
+  padding: 116px 0 72px;
+}
+
+.feature__heading {
+  color: #E7F9F9;
+}
+
+.feature__heading::after {
+  content: "";
+  position: relative;
+  bottom: 9px;
+  left: 10px;
+  display: inline-block;
+  width: 66px;
+  height: 2px;
+  background-color: #e7f9f9;
+}
+
+.features__content {
+  padding: 10px 80px 0 0;
+}
+
+.features__desc,
+.features__link--tilte {
+  font-family: Public Sans;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.556;
+}
+
+.features__desc {
+  color: var(--secondary-color-gray);
+}
+
+.features__link--tilte {
+  color: #FFF;
+  margin-right: 26px;
+}
+
+.features__link {
+  display: block;
+  margin-top: 13px;
+
+}
+
+.features__link:hover .features__link--tilte {
+  text-decoration: underline;
+}
+
+.features__link:hover .features__link--point {
+  transition: all ease 0.5s;
+  transform: translateX(10px);
+}
+
+.features__body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.features__video {
+  width: 1140px;
+  height: 544px;
+  border-radius: 22px;
+  object-fit: cover;
+}
+
+.feature__video--btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.feature__video--btn:hover {
+  transition: all ease 0.5s;
+  border: 1px solid rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.feature__body--blur,
+.feature__body--vector {
+  position: absolute;
+}
+
+.feature__body--vector {
+  transform: rotate(-5deg);
+  top: -150px;
+  right: -50px;
+  stroke-width: 1px;
+}
+
+.feature__body--blur {
+  top: -80px;
+  right: -50px;
+  transform: rotate(176.985deg);
 }

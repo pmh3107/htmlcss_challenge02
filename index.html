@@ -510,6 +510,75 @@
           </div>
         </div>
       </section>
+      <!-- Features -->
+      <section class="features">
+        <div class="container">
+          <div class="features__header">
+            <h2 class="section-heading feature__heading">
+              A quick glance of our past projects
+            </h2>
+            <div class="features__content">
+              <p class="features__desc">
+                Are you strive for the fast project simplicity and clarity.
+                Great design is born of those two things.
+              </p>
+              <a href="#!" class="features__link">
+                <span class="features__link--tilte">Browse all Projects</span>
+                <img
+                  src="assets/img/icon/left_point.svg"
+                  alt=""
+                  class="features__link--point"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="features__body">
+            <video
+              id="video-play"
+              poster="assets/videos/loi-nho-lyric.jpg"
+              src="assets/videos/Đen - Lối nhỏ ft. Biên (M_V).mp4"
+              class="features__video"
+            ></video>
+            <button
+              class="feature__video--btn"
+              id="video-btn--click"
+              onclick="playVideo()"
+            >
+              <img
+                src="assets/img/icon/play.svg"
+                alt=""
+                class="feature__video--btn-img"
+              />
+            </button>
+            <img
+              src="assets/img/icon/blur.svg"
+              alt=""
+              class="feature__body--blur"
+            />
+            <img
+              src="assets/img/icon/Vector_right.svg"
+              alt=""
+              class="feature__body--vector"
+            />
+          </div>
+        </div>
+      </section>
+      <script>
+        var video = document.getElementById("video-play");
+        var btn = document.getElementById("video-btn--click");
+        video.removeAttribute("controls");
+        function playVideo() {
+          if (video.pause) {
+            video.play();
+            btn.style.display = "none";
+            video.setAttribute("controls", "controls");
+          } else {
+            video.pause();
+            btn.style.display = "block";
+            btn.setAttribute("style", "display: block");
+          }
+        }
+      </script>
     </main>
   </body>
 </html>
