@@ -944,3 +944,114 @@ a {
   line-height: 1.71;
   /* 171.429% */
 }
+
+/* Blog */
+.blog {
+  margin: 134px 0 100px;
+}
+
+.blog__content {
+  margin: 10px 0 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog__heading {
+  width: 48.7%;
+}
+
+.blog__desc {
+  width: 35.8%;
+}
+
+.blog__heading::after {
+  content: "";
+  position: relative;
+  bottom: 9px;
+  left: 8px;
+  display: inline-block;
+  width: 66px;
+  height: 2px;
+  background-color: #152427;
+}
+
+.blog__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.blog__item {
+  width: 31.58%;
+  border-radius: 40px 40px 0 0;
+}
+
+.blog__item:hover {
+  width: 360px;
+  border-radius: 40px 40px 20px 20px;
+  background: var(--text-color-white, #FFF);
+  box-shadow: 0px 12px 74px 0px rgba(91, 91, 91, 0.25);
+}
+
+.blog__item--body {
+  transition: all ease 0.5s;
+  padding-top: 26px;
+}
+
+.blog__item:hover .blog__item--body {
+  padding: 26px 30px 12px 30px;
+}
+
+.blog__item--img {
+  border-radius: 40px 40px 0px 0px;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.blog__item:hover .blog__item--img {
+  transition: all ease 0.5s;
+  transform: scale(0.9);
+}
+
+.blog__item--link {
+  min-width: 107px;
+  line-height: 26px;
+  border-radius: 20px;
+  background: var(--scondery-color-light-green, #E2EDDF);
+  padding: 7px 34px;
+  color: #000;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.blog__item:hover .blog__item--link {
+  background: var(--primary-color-black-green);
+  color: var(--scondery-color-light-green, #E2EDDF);
+}
+
+.blog__item--heading {
+  margin: 13px 0 9px;
+  min-height: 90px;
+  color: var(--primary-color-black-green);
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.66;
+}
+
+.blog__item--day {
+  display: block;
+  padding-top: 16px;
+  border-top: 1px solid #C4C4C4;
+  text-align: right;
+  color: var(--text-color-black-gray);
+  /* Paragraph/10px */
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  /* 120% */
+}
