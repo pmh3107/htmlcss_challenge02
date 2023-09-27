@@ -92,6 +92,29 @@ a {
   /* 162.5% */
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-1 {
+  --line-clamp: 1;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+.line-clamp.line-3 {
+  --line-clamp: 3;
+}
+
+.word-break-all {
+  word-break: break-all;
+}
+
 /* Header */
 .header {
   font-family: "Public Sans", sans-serif;
